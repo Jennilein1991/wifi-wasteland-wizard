@@ -56,10 +56,6 @@ Amount range 5: 3
 - Per room/access point wireless channel suggestion
 - How close you are to the optimal solution (in %) due to additional constraints (like max access points in one building)
   - **By this you can see if you need more ports in a building to get the best coverage**
-  <pre>
-  Optimal solution found (tolerance 1.00e-04)
-Best objective 3.282000000000e+03, best bound 3.282000000000e+03, gap 0.0000%
-  </pre>
 
 You will get an output file with this format:
 
