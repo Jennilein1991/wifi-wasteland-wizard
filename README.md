@@ -3,7 +3,7 @@
  
 WiFi Wasteland Wizard is a Python script using [Gurobi](http://www.gurobi.com/) linear optimization libraries to calculate an optimal access point distribution for large scale, multi level buildings. It supports extending an existing WiFi installation by suggesting new locations for access points. By defining a list of blacklisted apartments and maximum possible installments per building you can tweak an existing WiFi installation. It will also show the optimal wireless channel per access point, such that channels do not (or less) overlapp.
 
-We deployed around 110 access point following the optimization suggestions and we can say it is gorgeous. You can find our status page with a WiFi map at https://ram.rwth-aachen.de/links/netzstatus#wifimap
+We deployed around 110 access points following the optimization suggestions and we can say it is gorgeous. You can find our status page with a WiFi map at https://ram.rwth-aachen.de/links/netzstatus#wifimap
 
 [![N](https://www.gurobi.com/documentation/7.0/quickstart_mac/logo.png)](http://www.gurobi.com/)
 
@@ -86,10 +86,10 @@ Amount range 5: 3
 
 New access points to setup sorted by building:
 buildingA:1034,2228,2111,2122,2115,2240,2056,2022,2255,2243,2336,2008,
-buildingB:<perfect coverage archieved>
-buildingC:<perfect coverage archieved>
+buildingB:<perfect coverage achieved>
+buildingC:<perfect coverage achieved>
 buildingD:1255,1035,1036,
-buildingE:<perfect coverage archieved>
+buildingE:<perfect coverage achieved>
 buildingF:1254,
 </pre>
 
