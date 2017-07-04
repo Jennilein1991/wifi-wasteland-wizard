@@ -56,6 +56,10 @@ Amount range 5: 3
 - Per room/access point wireless channel suggestion
 - How close you are to the optimal solution (in %) due to additional constraints (like max access points in one building)
   - **By this you can see if you need more ports in a building to get the best coverage**
+  <pre>
+  Optimal solution found (tolerance 1.00e-04)
+Best objective 3.282000000000e+03, best bound 3.282000000000e+03, gap 0.0000%
+  </pre>
 
 You will get an output file with this format:
 
@@ -94,7 +98,7 @@ buildingF:1254,
 </pre>
 
 
-### Adjusting Contraints
+### Adjusting Contraints and providing ressource files
 
 <pre>
 maximalAPNumberInRange = 99 #if you specify a linear impossible contraint, there will be no solution
@@ -104,8 +108,51 @@ channelRange = 1000 #10m how far an access points' channel can interfere with a 
 neighboursRange = 500 #5m # How far are rooms away from each other to be considered neighbours
 </pre>
 
+Edit these files to fit your buildings:
++ app_distance.txt
+<pre>
+-1001:<b>0.0</b>;300.0;1671.0961........323;
+-1002:300.0;<b>0.0</b>;1386.5650........123;
+-1005:1671.096191;1386.565063;<b>0.0</b>;300.000488;600.00......;
+</pre>
++ app_to_house.txt
+<pre>
+#house,app
+buildingA:2333
+buildingA:2153
+buildingB:1221
+buildingB:1337
+buildingC:1234
+...
+</pre>
++ existing_ap.txt
+<pre>
+#app,ap-prio <- prio not implemented
+2511:
+2514:
+2311:
+...
+</pre>
++ max_ports.txt
+<pre>
+buildingA:20
+buildingB:20
+buildingC:22
+buildingD:10
+buildingE:20
+buildingF:20
+</pre>
++ blacklist.txt
+<pre>
+2113,comment
+2511,
+2111,somecomment
+1221,
+1377,
+...
+</pre>
 
-### Installation
+### Run it
 
 WiFi Wasteland Wizard uses Python and Gurobi libraries to make the magic happen. You will have to have Python and Gurobi setup before continuing.
 
